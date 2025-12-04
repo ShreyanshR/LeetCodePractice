@@ -1,11 +1,7 @@
-from importlib.machinery import SourceFileLoader
-
-
 class Solution:
     def uniquePaths(self, m: int, n: int) -> int:
         rows, cols = m, n
         prevRow = [0] * cols
-
         for r in range(rows - 1, -1, -1):
             curRow = [0] * cols #current rows are all 0
             curRow[cols - 1] = 1
@@ -27,3 +23,4 @@ if __name__ == "__main__":
     S = Solution()
 
     print(S.uniquePaths(m,n))
+    print(S.uniquePaths(5,5))
