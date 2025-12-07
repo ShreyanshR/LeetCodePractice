@@ -6,7 +6,7 @@ class Solution:
         L , count = 0 , 0
 
         for R in range(len(arr)):
-            print(L,R)
+            #print(L,R)
             if R - L + 1 > k:
                 window_sum -= arr[L]
                 L += 1
@@ -20,7 +20,7 @@ class Solution:
                     print("greater than thres")
                     count += 1
 
-        print(count)
+        #print(count)
 
         return count
 
@@ -31,7 +31,7 @@ class Solution:
         for L in range(len(arr) - k + 1):
             #okay we are direcly starting the sum at the kth value, so we don't have to iterate thourgh the whole array
             R = L + k - 1
-            print(L,R)
+            #print(L,R)
             curSum += arr[R]
 
             if curSum/k >= threshold:
