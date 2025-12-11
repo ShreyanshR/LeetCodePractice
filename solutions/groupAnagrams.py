@@ -21,7 +21,13 @@ class Solution:
                 count[ord(c) - ord("a")] += 1
 
             res[tuple(count)].append(s)
+            print(res)
 
         
-        return res.values()
+        return list(res.values())
 
+if __name__ == "__main__":
+    strs = ["eat","tea","tan","ate","nat","bat"]
+
+    S = Solution()
+    S.groupAnagrams1(strs)
